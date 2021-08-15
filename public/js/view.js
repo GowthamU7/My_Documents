@@ -1,6 +1,6 @@
 
 
-fetch('http://localhost:3000/data').then((res)=>{
+fetch('/data').then((res)=>{
     res.json().then((data)=>{
         var main_div=document.getElementById('obj')
         if(data.length==0){
