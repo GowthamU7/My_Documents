@@ -1,0 +1,56 @@
+
+a{
+    text-decoration: none;
+    color: #888888;
+    
+}
+.download{
+    margin-top: 20px;
+    margin-left: 300px;
+    display: flex;
+    
+}
+button{
+    background-color: rgb(76, 238, 184);
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 4px 2px 0px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+button:hover{
+    box-shadow: 2px 4px 2px 0px rgba(0,0,0,0.2);
+}
+img{
+    width: 300px;
+}
+#obj{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+a{
+    margin-top: 100px;
+}
+iframe{
+    width: 300px;
+}
+#subdiv{
+    margin-top: 20px;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    box-shadow: 2px 4px 2px 0px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: mintcream;
+}
+#subdiv:hover{
+    box-shadow: 2px 4px 2px 0px rgba(0,0,0,0.2);
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+}

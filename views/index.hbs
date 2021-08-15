@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>File Manager</title>
+        <link rel="icon" href="/img/main_icon.png">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        {{>header}}
+    <div class="main">
+        <div class="submain">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="name"> File Name </label>
+            <input type="text" name="name" id="name" required> <br><br>
+            <input type="file" name='upload' id='upload' required><br><br>
+            <input type="submit" value="Upload" id="bt-upload">   
+        </form>
+        </div>
+        </div>
+    </body>
+    <script src="/js/index.js"></script>
+</html>

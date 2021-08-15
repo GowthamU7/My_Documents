@@ -1,0 +1,52 @@
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+#name{
+    outline: none;
+    background-color:mintcream;
+    border-bottom-color:rgb(151, 213, 238);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+input{
+    margin-top: 50px;
+}
+label{
+    color: #706a6a;
+    font-family: 'Courier New', Courier, monospace;
+}
+#upload{
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+#bt-upload{
+    width: 100px;
+    height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    background-color: rgba(6, 255, 130, 0.808);
+    box-shadow: 2px 4px 2px 0px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+input[type=file]::file-selector-button{
+    color: #706a6a;
+    font-family: 'Courier New', Courier, monospace;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(151, 213, 238);
+    outline: none;
+    border: none;
+    
+}
+form{
+    width: 400px;
+    height: 360px;
+    box-shadow: 2px 4px 2px 0px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: mintcream;
+    text-align: center;
+}
