@@ -6,6 +6,9 @@ const file_schema=new mg.Schema({
     },
     file:{
         type:String
+    },
+    date:{
+        type:String
     }
 })
 

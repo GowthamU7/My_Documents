@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>File Manager</title>
+        <link rel='icon' href="/img/main_icon.png">
+        <link rel='stylesheet' href='/css/show.css'>
+    </head>
+    <body>
+        {{>header}}
+        <object id='dt' data='data:{{type}};base64,{{data}}'></object>
+        <div class="del"><button onclick="del()">DELETE</button></div>
+    </body>
+    <script src='/js/show.js'></script>
+</html>

@@ -9,6 +9,7 @@ const par=pt.join(__dirname,'../partials')
 const mul=require('multer')
 require('../mongodb/mongoose')
 const file=require('../model/user')
+const async = require('hbs/lib/async')
 const storage=mul.diskStorage({
     destination:'public/images/',
     filename:function(req,file,cb){
@@ -38,10 +39,14 @@ app.post('/add', (req,res)=>{
         }else{
             const data=fs.readFileSync(req.file.path)
             const encd=data.toString('base64')
-            const newfile=new file({name:req.body.name+pt.extname(req.file.filename),file:encd})
+            var date=new Date()
+            var day=date.getDate()
+            var month=date.getMonth()
+            var year=date.getUTCFullYear()
+            const newfile=new file({name:req.body.name+pt.extname(req.file.filename),file:encd,date:day+'-'+month+'-'+year})
             newfile.save().then((data)=>{
             }).catch((e)=>{
-                console.log(e)
+                res.send('something went wrong')
             })
             res.redirect('/')
         }
@@ -60,7 +65,17 @@ app.get('/delete/:id',async (req,res)=>{
     await file.findByIdAndDelete({_id:req.params.id})
     res.redirect('/show')
 })
+app.get('/show/:id',async (req,res)=>{
+    var dt=await file.findById({_id:req.params.id})
+    if(dt.name.endsWith('.pdf')){
+        res.render('show',{type:'application/pdf',data:dt.file})
+    }
+    else if(dt.name.endsWith('.jpg') || dt.name.endsWith('.png') || dt.name.endsWith('.jpeg')){
+        res.render('show',{type:'image/png',data:dt.file})
+    }
+})
 
 app.listen(port,()=>{
     console.log('litening on port...',port)
 })
+
